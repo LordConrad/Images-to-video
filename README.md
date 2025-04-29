@@ -6,7 +6,7 @@ This tool can make videos from your images.
 
 <br>
 
-<img width="226" alt="python3 12_u4kRFWac6P" src="https://github.com/user-attachments/assets/977fd13e-5cd2-470d-b5e0-5aae2c880f87" />
+<img width="226" alt="ImageToVideo_JnlyYzx0gY" src="https://github.com/user-attachments/assets/383d1f62-d67f-4ad6-82a7-1587c890e9d0" />
 
 *Version 0.1-alpha*
   
