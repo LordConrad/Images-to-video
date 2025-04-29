@@ -17,3 +17,6 @@ This program uses the os.walk() function from the os library to recursively trav
 + Visual Studio Code
 + pain.net
 + ShareX
+
+## Credit
++ HappyPeter (lot of useful tips thanks!)
