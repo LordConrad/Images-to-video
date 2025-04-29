@@ -16,6 +16,6 @@ This program uses the os.walk() function from the os library to recursively trav
 - A separate video is created for each folder containing suitable image files. The output video can be named either by a user-selected name or automatically according to the path from the main folder to the folder containing the relevant materials. The program thus enables efficient and structured processing of large sets of images into clear video files.
 
 ## Used third party apps
-+ Visual Studio Code (<a src="https://code.visualstudio.com/">visualstudio.com</a>)
-+ pain.net
-+ ShareX
++ Visual Studio Code ([visualstudio.com](https://code.visualstudio.com/))
++ paint.net ([getpaint.net](https://www.getpaint.net/))
++ ShareX ([getsharex.net](https://www.getsharex.net/))
