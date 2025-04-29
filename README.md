@@ -2,13 +2,10 @@
 
 This tool can make videos from your images.
 
+<img width="226" alt="ImageToVideo_JnlyYzx0gY" src="https://github.com/user-attachments/assets/383d1f62-d67f-4ad6-82a7-1587c890e9d0" />
 <img width="150" src="https://github.com/user-attachments/assets/470cad39-d420-41c7-b017-e43e8feb7d79" />
 
-<br>
-
-<img width="226" alt="ImageToVideo_JnlyYzx0gY" src="https://github.com/user-attachments/assets/383d1f62-d67f-4ad6-82a7-1587c890e9d0" />
-
-*Version 0.1.1-alpha*
+ *Version 0.1.1-alpha*
   
 ## How it works?
 - Image to video tool uses [OpenCV](https://opencv.org/) libary for process Images to videos and [Tkinter](https://docs.python.org/3/library/tkinter.html) for simple GUI.
