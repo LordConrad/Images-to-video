@@ -8,9 +8,13 @@ from tkinter import filedialog as fd
 root_folder = ""
 default_fps = 15
 video_name = "New animation"
+
+Manage_folders_variable = {}
+
 Font1 = ("Arial",13)
 Font2 = ("Arial",10)
 Font3 = ("Arial",8)
+
 #Main window
 c= Tk()
 c.geometry("300x300")
@@ -36,12 +40,75 @@ def Name_from_directory_checking():
         video_name = default_video_name
     c.after(100, Name_from_directory_checking) 
 
+def Confirm_folders():
+    selected = [folder for folder, var in Manage_folders_variable.items() if var.get() == 1]
+    if selected:
+        print("Selected folders:")
+        for folder in selected:
+            print(f"{folder}")
+    else:
+        print("No folders selected.")
+
+
 def Manage_folders():
-    Manage_folders_window= Tk()
-    Manage_folders_window.geometry("600x500")
-    Manage_folders_window.resizable(False, False)
-    Manage_folders_window.title("Images to video")
-    Manage_folders_window.mainloop()
+    global Manage_folders_variable
+
+    Manage_folders_win = Toplevel()
+    Manage_folders_win.title("Manage folders")
+    Manage_folders_win.geometry("400x400")
+
+    canvas = Canvas(Manage_folders_win)
+    scrollbar = Scrollbar(Manage_folders_win, orient="vertical", command=canvas.yview)
+    scrollable_frame = Frame(canvas)
+
+    canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    canvas.pack(side="left", fill="both", expand=True)
+    scrollbar.pack(side="right", fill="y")
+
+    Label(scrollable_frame, text="Manage folders", font=('Arial', 14)).pack(pady=10, padx=130)
+
+    Button(scrollable_frame, text="Leave", command=Manage_folders_win.destroy).place(x=5, y=0)
+
+    Button(scrollable_frame, text="Confirm", command=Confirm_folders).place(x=325, y=0)
+
+    # Top buttons and select all in fixed layout
+    header_frame = Frame(scrollable_frame)
+    header_frame.pack(fill=X, pady=5)
+
+    select_all_var = IntVar()
+
+    def toggle_select_all():
+        value = select_all_var.get()
+        for var in Manage_folders_variable.values():
+            var.set(value)
+
+    # Folder checkboxes
+    try:
+        for folder in os.listdir(root_folder):
+            full_path = os.path.join(root_folder, folder)
+            if not os.path.isdir(full_path):
+                continue
+
+            if folder not in Manage_folders_variable:
+                Manage_folders_variable[folder] = IntVar()
+
+            var = Manage_folders_variable[folder]
+
+            row = Frame(scrollable_frame)
+            row.pack(anchor="w", padx=20)
+            Checkbutton(row, variable=var).pack(side=LEFT)
+            Label(row, text=folder).pack(side=LEFT)
+
+    except Exception as e:
+        Label(scrollable_frame, text="Directory is not selected").pack()
+
+    Checkbutton(scrollable_frame, variable=select_all_var, command=toggle_select_all).place(x=0, y=30)
+    Label(scrollable_frame, text="Select all").place(x=20, y=30)
+
+    Frame(scrollable_frame, height=20).pack()
+
 
 #Add elements
 Title_text_Video_settings = Label(c,text="Images to video tool",font=Font1)
@@ -124,16 +191,28 @@ def process_images_in_folder(folder_path, output_video_name=video_name + ".mp4",
     video.release()
     print(f"Video saved in: {os.path.join(folder_path, output_video_name)}")
 
-#Folder walking
 def process_all_folders(root_folder):
     global root
-    for root, dirs, files in os.walk(root_folder):
-        has_images = any(file.endswith((".jpg", ".png", ".jpeg")) for file in files)
-        
-        if has_images:
-            process_images_in_folder(root)
-    
-    messagebox.showinfo("Process ended","Process has succesfully ended")
+
+    selected_folders = [
+        os.path.join(root_folder, folder)
+        for folder, var in Manage_folders_variable.items()
+        if var.get() == 1
+    ]
+
+    if selected_folders:
+        for folder_path in selected_folders:
+            for root, dirs, files in os.walk(folder_path):
+                has_images = any(file.lower().endswith((".jpg", ".png", ".jpeg")) for file in files)
+                if has_images:
+                    process_images_in_folder(root)
+    else:
+        for root, dirs, files in os.walk(root_folder):
+            has_images = any(file.lower().endswith((".jpg", ".png", ".jpeg")) for file in files)
+            if has_images:
+                process_images_in_folder(root)
+
+    messagebox.showinfo("Process ended", "Process has successfully ended")
 
 def Render():
     process_all_folders(root_folder)
