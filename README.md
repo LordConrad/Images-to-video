@@ -14,7 +14,6 @@ This program uses the os.walk() function from the os library to recursively trav
 
 ## Future enhancements
 1. Add Progress bar
-2. Choose multiple folders
 3. Different settings for diferent folders
 4. Change lenght of video
 5. Speed settings
