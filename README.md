@@ -11,11 +11,11 @@ This program uses the os.walk() function from the os library to recursively trav
 
 ## Future enhancements
 1. Add Progress bar
-3. Different settings for diferent folders
-4. Change lenght of video
-5. Speed settings
-6. Resolution settings
-7. Rebuild to [.NET](https://dotnet.microsoft.com/en-us/)
+2. Different settings for diferent folders
+3. Change lenght of video
+4. Speed settings
+5. Resolution settings 
+6. Rebuild to C
 
 ## Used third party apps
 + Visual Studio Code ([visualstudio.com](https://code.visualstudio.com/))
