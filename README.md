@@ -11,10 +11,8 @@ This program uses the os.walk() function from the os library to recursively trav
 
 ## Future enhancements
 1. Different settings for diferent folders
-2. Change lenght of video
-3. Speed settings
-4. Resolution settings 
-5. Rebuild to C
+2. Resolution settings 
+3. Rebuild to C
 
 ## Used third party apps
 + Visual Studio Code ([visualstudio.com](https://code.visualstudio.com/))
