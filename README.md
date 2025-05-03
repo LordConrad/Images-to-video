@@ -10,12 +10,11 @@ This program uses the os.walk() function from the os library to recursively trav
 - A separate video is created for each selected folder that contains suitable image files. The output video can either use a custom name defined by the user or be automatically named based on the folder's path relative to the main directory. With the ability to manage which folders are processed, the program offers efficient and organized conversion of large image collections into clearly structured video files.
 
 ## Future enhancements
-1. Add Progress bar
-2. Different settings for diferent folders
-3. Change lenght of video
-4. Speed settings
-5. Resolution settings 
-6. Rebuild to C
+1. Different settings for diferent folders
+2. Change lenght of video
+3. Speed settings
+4. Resolution settings 
+5. Rebuild to C
 
 ## Used third party apps
 + Visual Studio Code ([visualstudio.com](https://code.visualstudio.com/))
