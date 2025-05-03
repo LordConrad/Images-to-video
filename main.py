@@ -114,7 +114,7 @@ def Manage_folders():
                 continue
 
             if folder not in Manage_folders_variable:
-                Manage_folders_variable[folder] = IntVar(value=1)  # auto checked
+                Manage_folders_variable[folder] = IntVar(value=1)
 
             var = Manage_folders_variable[folder]
 
@@ -149,7 +149,7 @@ def update_video_length_display():
 
         total_images = 0
         repeats = int(Number_of_repeats_insert.get("1.0", "end-1c")) or 1
-        speed = Speed_insert.get() or 1  # avoid zero
+        speed = Speed_insert.get() or 1
 
         for folder in selected_folders:
             if os.path.isdir(folder):
@@ -165,8 +165,7 @@ def update_video_length_display():
     except Exception as e:
         Lenght_displayer.config(text="Error calculating length")
 
-    # Repeat every 1 second
-    c.after(1000, update_video_length_display)
+    c.after(500, update_video_length_display)
 
 
 #Add elements
