@@ -1,18 +1,37 @@
-# Images-to-video
+# Images-to-Video
 
-This tool can make videos from your images.
+A simple yet powerful tool for creating videos from folders of images.
 
-<img width="150" src="https://github.com/user-attachments/assets/470cad39-d420-41c7-b017-e43e8feb7d79" />
-  
-## How it works?
-### [(Click here !)](HowItWorks.md)
+<p align="center">
+  <img width="200" src="https://github.com/user-attachments/assets/470cad39-d420-41c7-b017-e43e8feb7d79" alt="App Preview"/>
+</p>
 
-## Future enhancements
-1. Expand program to fullscreen
-2. Make Tutorial video and html page.
-3. Rebuild to C
+---
 
-## Used third party apps
-+ Visual Studio Code ([visualstudio.com](https://code.visualstudio.com/))
-+ paint.net ([getpaint.net](https://www.getpaint.net/))
-+ ShareX ([getsharex.net](https://getsharex.com/t))
+## How It Works
+
+Learn how the tool processes your images and generates videos.
+
+[Click here to view the guide](HowItWorks.md)
+
+---
+
+## Planned Enhancements
+
+- Add full-screen mode support
+- Create a tutorial video and HTML documentation page
+- Rebuild the application in C for performance
+
+---
+
+## Tools & Dependencies
+
+These third-party applications were used during development:
+
+- [Visual Studio Code](https://code.visualstudio.com/) — Code editor
+- [Paint.NET](https://www.getpaint.net/) — Lightweight image editor
+- [ShareX](https://getsharex.com/) — Screenshot and screen recording tool
+
+---
+
+> For full technical documentation, refer to the [HowItWorks.md](HowItWorks.md) file.
