@@ -1,7 +1,6 @@
 # Image to Video Tool
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![OpenCV](https://img.shields.io/badge/OpenCV-Enabled-lightgrey)](https://opencv.org/)
 [![GUI](https://img.shields.io/badge/Tkinter-GUI-yellow)](https://docs.python.org/3/library/tkinter.html)
 
@@ -13,20 +12,20 @@ The program recursively traverses a directory structure starting from a user-sel
 
 ## Features
 
-- ✅ **Automatic Image Detection**: Identifies folders with valid images automatically.
-- 🔧 **Custom Settings per Folder**: Define FPS, output name, and save location for each folder.
-- 🌍 **Main Settings Override**: Set global preferences to override individual folder options.
-- 🧠 **Image Sorting**: Alphabetical sorting before compiling the video.
-- 🖼 **Resolution Detection**: Uses the first image to determine output resolution.
-- ✍️ **Naming Options**:
+-  **Automatic Image Detection**: Identifies folders with valid images automatically.
+-  **Custom Settings per Folder**: Define FPS, output name, and save location for each folder.
+-  **Main Settings Override**: Set global preferences to override individual folder options.
+-  **Image Sorting**: Alphabetical sorting before compiling the video.
+-  **Resolution Detection**: Uses the first image to determine output resolution.
+-  **Naming Options**:
   - Custom name
   - Derived from folder name
-- 📁 **Save Path Options**:
+-  **Save Path Options**:
   - Save next to the image folder
   - Save to a global folder
-- 🔁 **Repeat & Speed Control**: Control video length with FPS and frame repeats.
-- 📏 **Video Length Estimator**: Preview expected video duration.
-- 🗂 **Folder Manager**: Pick specific folders to include/exclude.
+-  **Repeat & Speed Control**: Control video length with FPS and frame repeats.
+-  **Video Length Estimator**: Preview expected video duration.
+-  **Folder Manager**: Pick specific folders to include/exclude.
 
 ## Dependencies
 
@@ -50,22 +49,3 @@ The program recursively traverses a directory structure starting from a user-sel
 ## Output
 
 Each processed folder will result in one `.mp4` video saved based on the chosen naming and saving settings. Videos are built by sequencing images and optionally repeating them, using the selected FPS for timing.
-
-## Example
-
-```bash
-# Run the program
-python image_to_video_tool.py
-
-# Select root folder: /Users/yourname/Pictures/Timelapse
-
-# Result:
-# /Users/yourname/Pictures/Timelapse/Sunset -> Sunset.mp4
-# /Users/yourname/Pictures/Timelapse/Clouds -> Clouds.mp4
-```
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
