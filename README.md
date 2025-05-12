@@ -4,7 +4,8 @@ This tool can make videos from your images.
 
 <img width="150" src="https://github.com/user-attachments/assets/470cad39-d420-41c7-b017-e43e8feb7d79" />
   
-[How it works?](HowItWorks.md)
+## How it works?
+### [(Click here !)](HowItWorks.md)
 
 ## Future enhancements
 1. Expand program to fullscreen
