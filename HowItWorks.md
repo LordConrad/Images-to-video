@@ -43,8 +43,7 @@ The program recursively traverses a directory structure starting from a user-sel
     - Output name pattern
     - Save path
     - Frame repeat count
-5. **Review Estimated Duration** for each video.
-6. **Start Processing** — the tool will generate `.mp4` videos for all selected folders.
+5. **Start Processing** — the tool will generate `.mp4` videos for all selected folders.
 
 ## Output
 
