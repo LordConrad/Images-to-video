@@ -18,8 +18,6 @@ Learn how the tool processes your images and generates videos.
 
 ## Planned Enhancements
 
-- Add full-screen mode support
-- Create a tutorial video and HTML documentation page
 - Rebuild the application in C for performance
 
 ---
